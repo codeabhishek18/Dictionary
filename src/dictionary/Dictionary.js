@@ -20,7 +20,7 @@ const Dictionary = () =>
 
     const handleSearch = () =>
     {
-        const filteredValue = dictionary.filter((key) => (key.word === word))
+        const filteredValue = dictionary.filter((key) => key.word.toLowerCase() === word.toLowerCase())
         setDefinition(filteredValue[0]);
     }
 
