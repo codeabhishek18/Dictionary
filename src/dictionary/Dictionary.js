@@ -27,11 +27,11 @@ const Dictionary = () =>
     return(
         <div className={styles.container}>
             <h1>Dictionary App</h1>
-            <input type="text" value={word} onChange={(e)=> setWord(e.target.value)}/>
+            <input type="text" value={word} placeholder="Search for a word..." onChange={(e)=> setWord(e.target.value)}/>
             <button onClick={handleSearch}>Search</button>
-            <p style={{marginTop:0, fontWeight:500}}><bold>Definition : </bold></p>
+            <p style={{marginTop:0, fontWeight:700}}><bold>Definition:</bold></p>
             {definition === undefined ?  
-            <p>Word not found in the dictionary</p> : 
+            <p>Word not found in the dictionary.</p> : 
             <p>{definition?.meaning}</p>}
         </div>
     )
